@@ -1,0 +1,8 @@
+
+#Due to using custom functions for performace metrics the model can be loaded using the below commands
+#Also the code snippet to load the model is commented in the propsed LSTM model ipynb file
+
+from keras.models import load_model
+!apt-get install libhdf5-serial-dev
+import h5py
+cnnmodel = load_model('/content/drive/My Drive/NLP_Assignment_2/10_project_2_TT.h5', custom_objects={'f1_m':f1_m,'precision_m':precision_m,'recall_m':recall_m})
